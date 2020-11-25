@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/sliders.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='images/logozafavicon.png') }}"
+    />
+    <title>Vladimir Mijatovic</title>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="site-navigation">
+      <div class="site-navigation-inner site-container">
+        <!-- <img src="./images/vm.png" alt="site logo"> -->
+        <a href="{{ url_for('hi') }}"
+          ><img
+            src="{{ url_for('static', filename='images/vm.png') }}"
+            alt="site logo"
+          />
+        </a>
+        <div class="main-navigation">
+          <ul class="main-navigation__ul">
+            <li>
+              <a
+                href="https://ecommerce-example-flask.herokuapp.com/"
+                target="_blank"
+                >E-commerce app example</a
+              >
+            </li>
+            <li><a href="{{ url_for ('hi') }}">...</a></li>
+            <li><a href="{{ url_for ('hi') }}">...</a></li>
+            <li><a href="{{ url_for ('make_pdf') }}" target="_blank">Get Pdf</a></li>
+          </ul>
+        </div>
+        <div id="myBtn" class="burger-container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <script>
+          function myFunction(x) {
+            x.classList.toggle("change");
+          }
+        </script>
+      </div>
+    </nav>
+    <!-- Navigation end -->
+    <!-- Top banner -->
+
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+    <div
+      style="
+        background-color: #c18f59;
+        margin: auto;
+        width: 100%;
+        padding: 12px;
+        color: whitesmoke;
+        text-align: center;
+        font-size: 1.2rem;
+      "
+    >
+      {{ message }}
+    </div>
+    {% endfor %} {% block content %}
+    <section class="fh5co-top-banner">
+      <div class="top-banner__inner site-container">
+        <div class="top-banner__image">
+          <img src="{{ url_for('static', filename='images/ja2.png') }}"" alt="
+          author image">
+        </div>
+        <div class="top-banner__text">
+          <div class="top-banner__text-up">
+            <span class="brand-span">Hello! Im</span>
+            <h2 class="top-banner__h2">Vladimir</h2>
+          </div>
+          <div class="top-banner__text-down">
+            <h2 class="top-banner__h2">Mijatovic</h2>
+            <span class="brand-span">Python Developer</span>
+          </div>
+          <p>
+            "The beautiful thing about learning is nobody can take it away from
+            you..."
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Top banner end -->
+    <!-- About me -->
+    <section class="fh5co-about-me">
+      <div class="about-me-inner site-container">
+        <div class="about-me__text">
+          <div class="about-me-slider">
+            <div class="about-me-single-slide">
+              <h2 class="universal-h2 universal-h2-bckg">About me</h2>
+              <p>
+                <span>I</span>nnovative optimized solution seeker. Excited to be
+                at the deployment phase of my new career as a Python developer.
+                I am ambitious, adventurous, persistent, animated, and more than
+                anything curious.
+              </p>
+              <p>
+                Last three years involved in different kind of project,
+                proffesional and private, exposed to different kind of current
+                technologies.
+              </p>
+            </div>
+            <div class="about-me-single-slide">
+              <p>
+                Past work experience, before IT industry was related with
+                hospitality, and peak of my carrier was position as manager of
+                restaurant, where i spent three years as executive to fifteen
+                employees.
+              </p>
+              <p>
+                After that experience, I see its time to move on, and then i
+                found my new passion, programming.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-bckg"></div>
+    </section>
+    <!-- About me end -->
+    <section class="fh5co-about-me">
+      <div class="about-me-inner site-container">
+        <div class="about-me__text">
+          <h2 class="universal-h2 universal-h2-bckg">Work Experience</h2>
+        </div>
+      </div>
+      <div class="about-me-bckg-3"></div>
+    </section>
+    <!-- About me -->
+    <section class="fh5co-about-me left-1">
+      <div class="about-me-inner site-container">
+        <div class="about-me__text">
+          <div class="about-me-slider">
+            <div class="about-me-single-slide">
+              <h4>Monobunt Gmbh, Austria</h4>
+              <p class="p-white">08/2020 - present</p>
+              <p>
+                <span>C</span>urrently involved in REST api integration of
+                Syncspider as main product from Monobunt, with other platforms
+                through external api templates, with industry-standard protocols
+                for authorization, 0Auth, 0Auth2.0.
+              </p>
+            </div>
+            <div class="about-me-single-slide">
+              <p>
+                <span></span>Daily workflow consider extesinsively reading API
+                documentation, for demanded platforms, testing API-s in
+                enviroments such as Postman and Insomnia, then creating external
+                api templates which will expand Syncspider-s usecase.
+              </p>
+              <p>Also creating customized entitys, when user needs them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-bckg-1"></div>
+    </section>
+    <!-- About me end -->
+
+    <!-- About me -->
+    <section class="fh5co-about-me left-2">
+      <div class="about-me-inner site-container">
+        <div class="about-me__text">
+          <div class="about-me-slider">
+            <div class="about-me-single-slide">
+              <h4>Lukic & Geenan consulting GmbH, Hessen, Germany</h4>
+              <p class="p-white">01/2020 - 03/2020</p>
+              <p>
+                <span>D</span>evelopment of an responsive application for
+                internal use, which should show daily changes related to the
+                company's business, number of new users, oscillations in the
+                number of users related to last month, as well as last year.
+              </p>
+              >
+            </div>
+            <div class="about-me-single-slide">
+              <p>
+                The home page of the application is displayed on monitors within
+                the company, the implementation required verification of a
+                particular endpoint every few minutes, and by parsing the
+                incoming body, rendered to the screen.
+              </p>
+              <p>
+                Unfortunately, there is no possibility for a link that will take
+                you to the application, because the use is internal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-bckg-2"></div>
+    </section>
+    <!-- About me end -->
+
+    <!-- About me -->
+    <section class="fh5co-about-me left-3">
+      <div class="about-me-inner site-container">
+        <div class="about-me__text">
+          <div class="about-me-slider">
+            <div class="about-me-single-slide">
+              <h4>DSTV Multimedia, Belgrade</h4>
+              <p class="p-white">06/2019 - 01/2020</p>
+              <p>
+                <span>W</span>ork with the legacy code (Python/Flask,
+                PostgreSQL) of hybrid application. Project was stopped seven
+                years ago, and every documentation about project is gone. My job
+                was to analize project, creating tehnical documentation, GitHub
+                repos, wiki pages) and to develop new feature for this app.
+                Application was created to manage and maintaine internal
+                business for this company (payments, customers, subscriptions,
+                service providers, proxy servers, servers, active streaming
+                urls).
+              </p>
+            </div>
+            <div class="about-me-single-slide">
+              <p>
+                Target feature is specific page where customers can add their
+                own urls (links, M3U lists) which are free at the moment, but
+                not included in subscription.
+              </p>
+              <p>
+                Basicly this is another app, wich share same db, with the main
+                one. It was actually a challenge, to capture everything for the
+                reason, that a lot of libraries are outdated and it was
+                necessary to refactor a lot of libraries present in the
+                application.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-bckg-3"></div>
+    </section>
+    <!-- About me end -->
+
+    <!-- About me -->
+    <section class="fh5co-about-me left-4">
+      <div class="about-me-inner site-container">
+        <div class="about-me__text">
+          <div class="about-me-slider">
+            <div class="about-me-single-slide">
+              <h4>Other</h4>
+              <p class="p-white">2017 - present</p>
+              <p>
+                <span>T</span>he "Other" section is dedicated to the time I used
+                for training, because I am not a supporter of progress bars (I
+                really can't measure my knowledge in technology), I will list
+                the technologies that I am familiar with and that I used in the
+                period of self-education.
+              </p>
+            </div>
+            <div class="about-me-single-slide">
+              <p>
+                Some of them are: Vue.js, FastApi, Flask/Sqlalchemy,
+                Django/DjangoORM, RestApi integration. Databases: Postgresql and
+                Mongo DB. Python libraries such as Pandas, Matplotlib, Numpy,
+                Scikit Learn, Beautiful Soup, Selenium...
+              </p>
+              <p>
+                Of course I can add a lot more stuff to this list, but I think
+                it would be inappropriate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-bckg-4"></div>
+    </section>
+    <!-- About me end -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-container">
+        <div class="footer-inner">
+          <div class="footer-info">
+            <div class="footer-info__right">
+              <h5>Get In Touch</h5>
+              <p class="footer-phone">Phone: +381638033723</p>
+              <p>Email : mijatovski@gmail.com</p>
+              <div class="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/vladimir-mijatovic-96b63018a/"
+                  target="_blank"
+                  ><img
+                    src="{{ url_for('static', filename='images/linkedin2.png') }}"
+                    alt="social icon"
+                    style="size: 15px"
+                /></a>
+                <a href="https://github.com/prrPigeon" target="_blank"
+                  ><img
+                    src="{{ url_for('static', filename='images/github33.png') }}"
+                    alt="social icon"
+                    style="size: 15px"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-contact-form">
+            <h5>Contact Form</h5>
+            <form
+              action="{{ url_for('sendmail')}}"
+              class="contact-form"
+              method="POST"
+            >
+              <div class="contact-form__input">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
+              <textarea name="text" required></textarea>
+              <input
+                type="submit"
+                name="submit"
+                value="Submit"
+                class="submit-button"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="site-container footer-bottom-inner">
+          <p>© 2020 | Mijato</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    {% endblock content %}
+    <!-- Scripts -->
+    <script src="{{ url_for ('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for ('static', filename='js/slick.min.js') }}"></script>
+    <script src="{{ url_for ('static', filename='js/main.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jsquery.min"></script>
+  </body>
+</html>

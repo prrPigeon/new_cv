@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Curiculum Vitae</title>
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+  html{
+  font-size: x-small;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+ /* Split the screen in half */
+ .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #EB9343;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #6B514E;
+
+}
+
+/* If you want the content centered horizontally and vertically */
+.centeredR {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #EB9343;
+}
+  /* Thick orange border */
+  .centeredR > hr{
+    border: 1px solid #EB9343;
+    width:90%;
+    text-align:left;
+    margin: 5%;
+  }
+  .centeredL > hr{
+    border: 1px solid #6B514E;
+    width:90%;
+    text-align:left;
+    margin: 5%;
+  }
+
+.centeredL {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:#6B514E;
+}
+.centeredL > h5{
+  text-align: left;
+  padding-left: 5%;
+}
+
+/* Style the image inside the centered container, if needed */
+.centeredR img {
+  width: 250px;
+  border-radius: 5%;
+} 
+.about{
+  padding-left: 5%;
+}
+.quote blockquote {
+    border-radius: 3px;
+    position: relative;
+    font-style: italic;
+    font-size: larger;
+    text-align: center;
+    padding: 2rem 2.2rem;
+    width: 80%;
+    color: #4a4a4a;
+    margin: 1rem auto 2rem;
+    color: #6B514E;
+    background:#EB9343;
+}
+.centeredR .social{
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  /* background-color: #EB9343; */
+}
+</style>
+</head>
+
+<body>
+    <div class="split left">
+      <div class="centeredL">
+        <h3>Work Experience</h3>
+        <hr>
+        <div>        
+          <h5>SyncSpider GmbH/Ried im Innkreis/Austria</h5>
+          <h6>08/2020 - present</h6>
+          <p>•Currently involved in REST api integration of Syncspider as main product
+            from Monobunt, with other platforms through external api templates,
+            with industry-standard protocols for authorization, 0Auth, 0Auth2.0.
+          Daily workflow consider extesinsively reading API documentation, for
+            demanded platforms, testing API-s in enviroments such as Postman and Insomnia,
+            then creating external api templates which will expand Syncspider-s usecase.
+          Also creating customized entitys, when user needs them•</p>
+
+        </div>
+        <hr>
+        <div>        
+          <h5>lukic & geenen Consulting GmbH/Groß-Umstadt/Germany</h5>
+          <h6>01/2020 - 03/2020</h6>
+          <p>•Development of an responsive application for internal use, which should show daily changes 
+            related to the company's business, number of new users, oscillations in the number 
+            of users related to last month, as well as last year. 
+            Tech stack:Python 3, Django, Ajax, Postgresql•</p>
+        </div>
+        <hr>
+        <div>        
+          <h5>DSTV Multimedia/Beograd/Serbia</h5>
+          <h6>07/2019 - 01/2020</h6>
+          <p>•Development of the outdated hybrid Python 2.7 application, which spent seven years in a drawer,
+            The application handles the company's internal affairs, number of users, subscriptions, server availability,
+            delivery of links to end users. The application is owned by a company that is a leader in online television business.
+            As a Python developer on the team, my job was to analyze code, create technical documentation, which didn't exist at all,
+            development of new features required by management.
+            As well as creating a new database and application-related migration.
+            Teck stack: Python 2, Postgresql, Flask, Bash, Lua.•</p>
+
+        </div>
+        <hr>
+        <div>        
+          <p>•The "Other" section is dedicated to the time I used for training, because I am not a
+             supporter of progress bars (I really can't measure my knowledge in technology), 
+             I will list the technologies that I am familiar with and 
+             that I used in the period of self-education. Some of them are:
+            Vue.js, FastApi, Flask/Sqlalchemy, Django/DjangoORM, RestApi integration. 
+            Databases: Postgresql and Mongo DB. Python libraries such as Pandas, Matplotlib, Numpy, Scikit Learn, 
+            Beautiful Soup, Selenium...•</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="split right">
+
+      <div class="centeredR">
+        <img src="{{ url_for('static', filename='images/ja2.png') }}" alt="image">
+        <h4>Vladimir Mijatovic</h4>
+        <p><img src="/static/images/phone.png" class="social">+381638033723</p>
+        <p><img src="/static/images/mail.png" class="social">mijatovski@gmail.com</p>
+        <a href="https://github.com/prrPigeon" target="_blank"><img src="/static/images/github.png" class="social"></a> <a href="https://www.linkedin.com/in/vladimir-mijatovic-96b63018a/"
+        target="_blank"><img src="/static/images/linkedin.png" class="social"></a>
+        <h3>About</h3>
+      <div class="about"> 
+        <p>• Innovative optimized solution seeker. Excited to be at the deployment phase
+          of my new career as a Python developer.
+          I am ambitious, adventurous, persistent, animated, and more than anything curious •</p>
+        <p>• Last three years involved in different kind of project, proffesional and private, exposed
+          to different kind of current technologies •</p> 
+        <p>
+          • If you need someone who is interested in a lot of things, from web development, through presentations, 
+        creating applications, to data science analysis. Maybe I would be a good choice•
+        </p>      
+      </div>
+      <hr>
+      <div class="quote">
+        <blockquote>
+            <p>” The beautiful thing about learning is nobody can take it away from you.”</p>
+            <cite><span>• B.B. King</span><br></cite>
+        </blockquote>  
+    </div>
+</div>         
+      </div>
+
+    </div> 
+    </div>
+  </div>
+
+</body>
+
+</html>
